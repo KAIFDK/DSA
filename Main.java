@@ -9,6 +9,7 @@ class Node{
     }
 }
 
+
 class LL{
     Node head;
 
@@ -35,12 +36,30 @@ class LL{
         System.out.println();
     }
 
+    static void reverse(LL l1){
+        Node prev = null;
+        Node curr = l1.head;
+        Node next = null;
+
+        while (curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        l1.head = prev;
+    }
+    
+    
+
     public static void main(String[] args) {
         LL l1 = new LL();
         insert(l1, 10);
         insert(l1,20);
         insert(l1,30);
         insert(l1,40);
+        print(l1);
+        reverse(l1);
         print(l1);
 
     }
