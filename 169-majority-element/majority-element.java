@@ -1,7 +1,7 @@
 class Solution {
     public int majorityElement(int[] nums) {
         //KAIFDK
-        HashMap<Integer,Integer> hash= new HashMap();
+        HashMap<Integer,Integer> hash = new HashMap();
 
         int maj = 0;
         int res = 0;
